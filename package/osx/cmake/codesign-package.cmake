@@ -13,8 +13,7 @@ set(CODESIGN_FLAGS
    --options runtime
    --timestamp
    --entitlements "@CMAKE_CURRENT_SOURCE_DIR@/entitlements.plist"
-   --force
-   --deep)
+   --force)
 
 # NOTE: we always attempt to sign a package build of RStudio
 # (even if it's just a development build) as our usages of
