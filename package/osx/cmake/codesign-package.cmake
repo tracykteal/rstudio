@@ -12,7 +12,8 @@ cmake_policy(SET CMP0011 NEW)
 set(CODESIGN_FLAGS
    --options runtime
    --timestamp
-   --entitlements "@CMAKE_CURRENT_SOURCE_DIR@/entitlements.plist")
+   --entitlements "@CMAKE_CURRENT_SOURCE_DIR@/entitlements.plist"
+   --deep)
 
 # NOTE: we always attempt to sign a package build of RStudio
 # (even if it's just a development build) as our usages of
