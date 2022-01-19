@@ -11,6 +11,8 @@
     "clean": "ts-node scripts/clean.ts",
     "lint": "eslint ./src ./test",
     "make": "wrap () { set -e ; yarn run clean ; electron-forge make $*; ./scripts/rename-dmg.sh;}; wrap",
+    "make-osx-x64": "wrap () { set -e ; yarn run clean ; electron-forge make $* --arch x64; ./scripts/rename-dmg.sh;}; wrap",
+    "make-osx-arm": "wrap () { set -e ; yarn run clean ; electron-forge make $* --arch arm64; ./scripts/rename-dmg.sh;}; wrap",
     "package": "electron-forge package",
     "start": "electron-forge start",
     "test": "electron-mocha -c --config ./test/unit/mocharc.json",
